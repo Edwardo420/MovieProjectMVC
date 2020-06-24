@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - MyMovieList</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-stape.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <header>
+        @*navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3*@
+        <nav class="navbar" style="background-color:#4186AB;color:#2B3E50">
+            <div class="container">
+                <a class="navbar-brand"
+                   asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Pictures/smolicon.png" style="width: 4vh;height: 4vh;"> MovieList</a>
+                <a class="navbar-brand"
+                   onclick="javascript:ShowHide('HiddenDiv')"> Categories </a>
+                <a class="navbar-brand"
+                   asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <a class="navbar-brand"
+                   asp-area="" asp-controller="FavoriteList" asp-action="Index"> FavoriteList</a>
+                @await Component.InvokeAsync("FavoriteListSummary")
+                <form class="navbar-brand" asp-controller="Movie" asp-action="Search" method="get">
+                    <input type="text" class="form-control" placeholder="Search for a movie" name="searchString" value="@ViewData["searchString"]">
+                </form>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+        <div style="text-align:center">
+            <div id="HiddenDiv" style="display: none; background-color: #4186AB;text-align:center">
+                <div class="container">
+                    @await Component.InvokeAsync("GenreMenu")
+                </div>
+                <div class="container">
+                    @await Component.InvokeAsync("DirectorMenu")
+                </div>
+            </div>
+            <div class="container body-content" style="padding:50px;">
+                @RenderBody()
+                <hr />
+
+            </div>
+            @RenderSection("scripts", required: false)
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script type="text/javascript">
+
+        function ShowHide(divId) {
+            if (document.getElementById(divId).style.display == 'none') {
+                document.getElementById(divId).style.display = 'inline-block';
+            }
+            else {
+                document.getElementById(divId).style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

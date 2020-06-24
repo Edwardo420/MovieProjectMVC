@@ -1,0 +1,5 @@
+C:\Users\spide\Desktop\MovieStructure\bin\Debug\netstandard2.0\MovieStructure.deps.json
+C:\Users\spide\Desktop\MovieStructure\bin\Debug\netstandard2.0\MovieStructure.dll
+C:\Users\spide\Desktop\MovieStructure\obj\Debug\netstandard2.0\MovieStructure.csprojAssemblyReference.cache
+C:\Users\spide\Desktop\MovieStructure\obj\Debug\netstandard2.0\MovieStructure.AssemblyInfoInputs.cache
+C:\Users\spide\Desktop\MovieStructure\obj\Debug\netstandard2.0\MovieStructure.AssemblyInfo.cs

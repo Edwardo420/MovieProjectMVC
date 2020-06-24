@@ -1,0 +1,9 @@
+﻿
+
+@foreach (var director in Model)
+{
+    <a class="navbar-brand"
+       asp-controller="Director" asp-action="ListDirector"
+       asp-route-director="@director.LastName">@director.FirstName @director.LastName</a>
+}
+<a class="navbar-brand" asp-controller="Genre" asp-action="ListGenre"> View all movies</a>

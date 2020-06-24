@@ -1,0 +1,8 @@
+﻿@model MovieListViewModel
+
+<div class="row marginTop">
+   @foreach (var movie in Model.Movies)
+    {
+        <partial name="MoviesSummary" model="movie" />
+    }
+</div> 

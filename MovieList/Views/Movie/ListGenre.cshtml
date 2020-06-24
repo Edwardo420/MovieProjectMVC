@@ -1,0 +1,8 @@
+﻿@model GenreViewModel
+
+    <div class="row marginTop">
+        @foreach (var movie in Model.Genres)
+        {
+            <partial name="MoviesSummary" model="movie" />
+        }
+    </div>

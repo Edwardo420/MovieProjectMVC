@@ -1,0 +1,24 @@
+﻿@model MovieStructure.Models.Movie
+@{
+}
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@Model.Image" style="width: 40vh; height: 60vh;padding-right: 3vh" alt="@Model.Title" />
+            <div class="caption">
+                <h3>
+                    <a asp-controller="Movie" asp-action="Details" asp-route-movieId="@Model.MovieID">@Model.Title</a>
+                </h3>
+            </div>
+            <div class="addToCart text-left">
+                <p class="button">
+                    <center>
+                        <a type="button" class="btn btn-primary" id="cartButton"
+                           asp-controller="FavoriteList" asp-action="AddToFavoriteList" asp-route-movieId="@Model.MovieID">
+                            Add to Favorite
+                        </a>
+                    </center>
+                </p>
+            </div>
+        </div>
+    </div>
+

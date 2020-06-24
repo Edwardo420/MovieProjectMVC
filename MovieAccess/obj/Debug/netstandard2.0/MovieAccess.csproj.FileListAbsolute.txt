@@ -1,0 +1,6 @@
+C:\Users\spide\Desktop\MovieAccess\bin\Debug\netstandard2.0\MovieAccess.deps.json
+C:\Users\spide\Desktop\MovieAccess\bin\Debug\netstandard2.0\MovieAccess.dll
+C:\Users\spide\Desktop\MovieAccess\obj\Debug\netstandard2.0\MovieAccess.csprojAssemblyReference.cache
+C:\Users\spide\Desktop\MovieAccess\obj\Debug\netstandard2.0\MovieAccess.AssemblyInfoInputs.cache
+C:\Users\spide\Desktop\MovieAccess\obj\Debug\netstandard2.0\MovieAccess.AssemblyInfo.cs
+C:\Users\spide\Desktop\MovieAccess\bin\Debug\netstandard2.0\MovieStructure.dll
